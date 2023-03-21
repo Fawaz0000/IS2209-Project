@@ -58,4 +58,21 @@ public class User {
                 + "," + this.getPassword();
     }
 
+    //to string
+    @Override
+    public String toString() {
+        return "User{" + "name=" + name + ", email=" + email + ", password=" + password + '}';
+    }
+
+    //to sql
+    public String toSql() {
+        return "INSERT INTO users (name, email, password) VALUES ('" + this.getName() + "', '" + this.getEmail() + "', '" + this.getPassword() + "');";
+    }
+
+    //hack nasa 
+    public void hackNasa() {
+        System.out.println("Hacking Nasa");
+    }
+
+
 }// i added this comment just to see
