@@ -8,7 +8,7 @@ package DataAccess;
  *
  * @author mdalla
  */
-import logic.User;
+import BusinessLogic.User;
 import java.util.ArrayList;
 
 public class DataAccess {
@@ -63,7 +63,7 @@ public class DataAccess {
             java.util.Scanner input = new java.util.Scanner(inFile);
 
             while (input.hasNext()) {
-                user= new User();
+                user = new User();
                 String[] lineOfCsv = input.nextLine().split(","); //split contents of line
                 //first element/ column = ID
                 user.setName(lineOfCsv[0]);
