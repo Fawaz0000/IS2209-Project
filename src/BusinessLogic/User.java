@@ -58,6 +58,13 @@ public class User {
                 + "," + this.getPassword();
     }
 
+    // use special chars to save commas in the csv file
+    public String convertToCsvWithSpecialChars() {
+        return this.getName().replace(",", "||")
+                + "," + this.getEmail().replace(",", "||")
+                + "," + this.getPassword().replace(",", "||");
+    }
+
     //to string
     @Override
     public String toString() {
@@ -69,10 +76,5 @@ public class User {
         return "INSERT INTO users (name, email, password) VALUES ('" + this.getName() + "', '" + this.getEmail() + "', '" + this.getPassword() + "');";
     }
 
-    //hack nasa 
-    public void hackNasa() {
-        System.out.println("Hacking Nasa");
-    }
-
-
+    //create an online shopping system
 }// i added this comment just to see
