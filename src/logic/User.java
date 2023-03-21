@@ -10,6 +10,7 @@ package logic;
  */
 public class User {
     private String lastname;
+
     private String email;
     private String password;
 
@@ -18,6 +19,7 @@ public class User {
     }
     public void setName(String name){
         this.lastname = name;
+
     }
     public String getEmail(){
         return this.email;
