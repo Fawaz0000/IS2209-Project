@@ -9,15 +9,15 @@ package logic;
  * @author mdalla
  */
 public class User {
-    private String name;
+    private String firstName;
     private String email;
     private String password;
 
     public String getName(){
-        return this.name;
+        return this.firstName;
     }
     public void setName(String name){
-        this.name = name;
+        this.firstName = name;
     }
     public String getEmail(){
         return this.email;
