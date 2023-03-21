@@ -9,17 +9,18 @@ package BusinessLogic;
  * @author mdalla
  */
 public class User {
-    private String lastname;
+
+    private String name;
 
     private String email;
     private String password;
 
     public String getName() {
-        return this.lastname;
+        return this.name;
     }
 
     public void setName(String name) {
-        this.lastname = name;
+        this.name = name;
 
     }
 
@@ -42,11 +43,11 @@ public class User {
     }
 
     public User(String name, String email, String password) {
-        this.lastname = name;
+        this.name = name;
         this.email = email;
         this.password = password;
     }
-    
+
     public User() {
     }
 
