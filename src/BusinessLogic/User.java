@@ -11,9 +11,11 @@ package BusinessLogic;
 public class User {
 
     private String name;
-
     private String email;
     private String password;
+    private Size shoeSize;
+    private Size shirtSize;
+    private Size pantSize;
 
     public String getName() {
         return this.name;
@@ -51,30 +53,40 @@ public class User {
     public User() {
     }
 
-    // instance method that returns CSV OF THE ObJECT
-    public String convertToCsv() {
-        return this.getName()
-                + "," + this.getEmail()
-                + "," + this.getPassword();
+    public Size getShoeSize() {
+        return shoeSize;
     }
 
-    // use special chars to save commas in the csv file
-    public String convertToCsvWithSpecialChars() {
-        return this.getName().replace(",", "||")
-                + "," + this.getEmail().replace(",", "||")
-                + "," + this.getPassword().replace(",", "||");
+    public void setShoeSize(String size) {
+        this.shoeSize = new Size(size);
     }
 
-    //to string
-    @Override
-    public String toString() {
-        return "User{" + "name=" + name + ", email=" + email + ", password=" + password + '}';
+    public void setShoeSize(Size shoeSize) {
+        this.shoeSize = shoeSize;
     }
 
-    //to sql
-    public String toSql() {
-        return "INSERT INTO users (name, email, password) VALUES ('" + this.getName() + "', '" + this.getEmail() + "', '" + this.getPassword() + "');";
+    public Size getShirtSize() {
+        return shirtSize;
     }
 
-    //create an online shopping system
-}// i added this comment just to see
+    public void setShirtSize(String size) {
+        this.shirtSize = new Size(size);
+    }
+
+    public void setShirtSize(Size shirtSize) {
+        this.shirtSize = shirtSize;
+    }
+
+    public Size getPantSize() {
+        return pantSize;
+    }
+    
+    public void setPantSize(String size) {
+        this.pantSize = new Size(size); 
+    }
+
+    public void setPantSize(Size pantSize) {
+        this.pantSize = pantSize;
+    }
+
+ }
