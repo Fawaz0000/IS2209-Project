@@ -17,10 +17,12 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import BusinessLogic.User;
+import DataAccess.DataStore;
+import static DataAccess.DataStore.getInstance;
 
 public class FXMLDocumentController {
 
-    DataAccess dataAccess = new DataAccess();
+  DataStore dataAccess =  getInstance();
 
     @FXML
     private PasswordField pwlogPassword;
@@ -56,7 +58,7 @@ public class FXMLDocumentController {
         userToCheck.setEmail(tflogEmailAddress.getText());
         userToCheck.setPassword(pwlogPassword.getText());
 
-        boolean userP = dataAccess.dologin(userToCheck);
+        boolean userP = true; //dataAccess.dologin(userToCheck);
         
         if (userP == true) {
             talogMessage.setText("User Found");
@@ -89,8 +91,8 @@ public class FXMLDocumentController {
         userToCreate.setEmail(tfregEmailAddress.getText());
         userToCreate.setPassword(pwregPassword.getText());
 
-        dataAccess.create(userToCreate);
-        dataAccess.write();
+//        dataAccess.create(userToCreate);
+//        dataAccess.write();
         taregMessage.setText("User Registered");
 
     }
