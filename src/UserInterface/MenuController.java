@@ -11,7 +11,7 @@ import javafx.fxml.Initializable;
 /**
  * FXML Controller class
  *
- * @author mdalla
+ * @author fawaz
  */
 public class MenuController implements Initializable {
 
