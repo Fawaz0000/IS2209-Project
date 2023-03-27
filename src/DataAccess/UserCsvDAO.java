@@ -28,8 +28,9 @@ public class UserCsvDAO extends UserDAO {
 
     @Override
     public User read(int id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'read'");
+        
+        return null;
+       
     }
 
     @Override

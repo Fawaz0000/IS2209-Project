@@ -46,8 +46,15 @@ public class ColorCsvDAO extends ColorDAO {
 
     @Override
     public List<Color> getAll() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getAll'");
+        ArrayList<Color> colors = new ArrayList();
+        CsvResultSet result = io.load(); //
+        while(result.next()){
+            //make color
+//            result.getString();
+            
+        
+        }
+        return colors;
     }
 
 }
