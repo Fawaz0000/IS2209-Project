@@ -12,31 +12,32 @@
    <left>
       <AnchorPane prefHeight="400.0" prefWidth="242.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="78.0" layoutY="25.0" prefHeight="37.0" prefWidth="118.0" text="Login" />
-            <PasswordField fx:id="pwlogPassword" layoutX="40.0" layoutY="188.0" />
-            <TextField fx:id="tflogEmailAddress" layoutX="39.0" layoutY="123.0" />
-            <Label layoutX="39.0" layoutY="91.0" prefHeight="17.0" prefWidth="106.0" text="Email Address" />
-            <Label layoutX="43.0" layoutY="158.0" prefHeight="17.0" prefWidth="143.0" text="Password" />
-            <Button layoutX="39.0" layoutY="341.0" mnemonicParsing="false" onAction="#btnlogLogin" text="Login" />
-            <Button layoutX="153.0" layoutY="341.0" mnemonicParsing="false" onAction="#btnlogClear" text="Clear" />
-            <TextArea fx:id="talogMessage" layoutX="39.0" layoutY="281.0" prefHeight="37.0" prefWidth="150.0" />
+            <Label layoutX="47.0" layoutY="32.0" prefHeight="17.0" prefWidth="100.0" text="Register" />
+            <TextField fx:id="tfregName" layoutX="14.0" layoutY="76.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="22.0" layoutY="59.0" prefHeight="17.0" prefWidth="95.0" text="Name" />
+            <Label layoutX="22.0" layoutY="115.0" prefHeight="17.0" prefWidth="109.0" text="Email Address" />
+            <TextField fx:id="tfregEmailAddress" layoutX="15.0" layoutY="132.0" prefHeight="25.0" prefWidth="164.0" />
+            <Label layoutX="12.0" layoutY="176.0" prefHeight="17.0" prefWidth="115.0" text="Password" />
+            <PasswordField fx:id="pwregPassword" layoutX="13.0" layoutY="200.0" prefHeight="25.0" prefWidth="163.0" />
+            <TextArea fx:id="taregMessage" layoutX="6.0" layoutY="273.0" prefHeight="34.0" prefWidth="200.0" />
+            <Button layoutX="32.0" layoutY="337.0" mnemonicParsing="false" onAction="#btnregRegister" text="Register" />
+            <Button layoutX="147.0" layoutY="329.0" mnemonicParsing="false" onAction="#btnregClear" text="Clear" />
          </children>
       </AnchorPane>
    </left>
    <center>
       <AnchorPane prefHeight="400.0" prefWidth="268.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="115.0" layoutY="26.0" prefHeight="17.0" prefWidth="100.0" text="Register" />
-            <Label layoutX="33.0" layoutY="65.0" prefHeight="17.0" prefWidth="95.0" text="Name" />
-            <Label layoutX="40.0" layoutY="130.0" prefHeight="17.0" prefWidth="109.0" text="Email Address" />
-            <Label layoutX="37.0" layoutY="200.0" prefHeight="17.0" prefWidth="115.0" text="Password" />
-            <PasswordField fx:id="pwregPassword" layoutX="35.0" layoutY="227.0" prefHeight="25.0" prefWidth="163.0" />
-            <TextField fx:id="tfregName" layoutX="35.0" layoutY="93.0" prefHeight="25.0" prefWidth="160.0" />
-            <TextField fx:id="tfregEmailAddress" layoutX="35.0" layoutY="160.0" prefHeight="25.0" prefWidth="164.0" />
-            <TextArea fx:id="taregMessage" layoutX="30.0" layoutY="279.0" prefHeight="34.0" prefWidth="200.0" />
-            <Button layoutX="35.0" layoutY="337.0" mnemonicParsing="false" onAction="#btnregRegister" text="Register" />
-            <Button layoutX="184.0" layoutY="337.0" mnemonicParsing="false" onAction="#btnregClear" text="Clear" />
+            <Label layoutX="80.0" layoutY="14.0" prefHeight="37.0" prefWidth="118.0" text="Login" />
+            <Label layoutX="18.0" layoutY="64.0" prefHeight="17.0" prefWidth="106.0" text="Email Address" />
+            <TextField fx:id="tflogEmailAddress" layoutX="16.0" layoutY="94.0" />
+            <Label layoutX="19.0" layoutY="138.0" prefHeight="17.0" prefWidth="143.0" text="Password" />
+            <PasswordField fx:id="pwlogPassword" layoutX="19.0" layoutY="161.0" />
+            <TextArea fx:id="talogMessage" layoutX="19.0" layoutY="210.0" prefHeight="37.0" prefWidth="150.0" />
+            <Button layoutX="25.0" layoutY="332.0" mnemonicParsing="false" onAction="#btnlogLogin" text="Login" />
+            <Button layoutX="124.0" layoutY="332.0" mnemonicParsing="false" onAction="#btnlogClear" text="Clear" />
          </children>
       </AnchorPane>
    </center>
 </BorderPane>
+
