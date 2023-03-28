@@ -14,6 +14,9 @@ public class Color {
 
     public Color() {
     }
+    public Color(String color) {
+        this.color = color;
+    }
 
     public String getColor() {
         return this.color;

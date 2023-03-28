@@ -1,6 +1,7 @@
 package DataAccess;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -90,4 +91,88 @@ public class CsvResultSet {
          return this.columns;
     }
     
+    public CsvResultSet where(String colName, Object colValue){
+        CsvResultSet retData;
+        String colValueString = colValue.toString();
+        List<Map<String,Object>> rows = new ArrayList<Map<String,Object>>();
+         while(this.next()){
+             if (this.getString(colName).equals(colValueString)) {
+                 rows.add(this.getCurrentRow());
+             }
+        }
+         return new CsvResultSet(this.getColumns(), rows);
+     }
+     
+     public CsvResultSet where(int colIndex, Object colValue){
+        CsvResultSet retData;
+        String colValueString = colValue.toString();
+        List<Map<String,Object>> rows = new ArrayList<Map<String,Object>>();
+         while(this.next()){
+             if (this.getString(colIndex).equals(colValueString)) {
+                 rows.add(this.getCurrentRow());
+             }
+        }
+         return new CsvResultSet(this.getColumns(), rows);
+     }
+
+
+    public void deleteRow() {
+        data.remove(currentRow);
+    }
+
+    public void updateString(String colName, String colValue) {
+        data.get(currentRow).put(colName, colValue);
+    }
+
+    public void updateString(int colIndex, String colValue) {
+        data.get(currentRow).put(columns.get(colIndex), colValue);
+    }
+
+    public void updateInt(String colName, int colValue) {
+        data.get(currentRow).put(colName, colValue);
+    }
+
+    public void updateInt(int colIndex, int colValue) {
+        data.get(currentRow).put(columns.get(colIndex), colValue);
+    }
+
+    public void updateDouble(String colName, double colValue) {
+        data.get(currentRow).put(colName, colValue);
+    }
+
+    public void updateDouble(int colIndex, double colValue) {
+        data.get(currentRow).put(columns.get(colIndex), colValue);
+    }
+
+    public void updateBoolean(String colName, boolean colValue) {
+        data.get(currentRow).put(colName, colValue);
+    }
+
+    public void updateBoolean(int colIndex, boolean colValue) {
+        data.get(currentRow).put(columns.get(colIndex), colValue);
+    }
+
+    public void updateTimestamp(String colName, Timestamp colValue) {
+        data.get(currentRow).put(colName, colValue);
+    }
+
+    public void updateTimestamp(int colIndex, Timestamp colValue) {
+        data.get(currentRow).put(columns.get(colIndex), colValue);
+    }
+
+    public void updateObject(String colName, Object colValue) {
+        data.get(currentRow).put(colName, colValue);
+    }
+
+    public void updateObject(int colIndex, Object colValue) {
+        data.get(currentRow).put(columns.get(colIndex), colValue);
+    }
+
+    public void updateRow(Map<String, Object> row) {
+        data.set(currentRow, row);
+    }
+
+    public void addRow(Map<String, Object> row) {
+        data.add(row);
+    }
 }

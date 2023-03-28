@@ -134,30 +134,7 @@ public class InputOutput {
         }
         return this.data;
     }
-    
-    public CsvResultSet where(String colName, Object colValue){
-       CsvResultSet retData;
-       List<Map<String,Object>> rows = new ArrayList<Map<String,Object>>();
-        while(this.data.next()){
-            if (this.data.getObject(colName) == colValue) {
-                rows.add(this.data.getCurrentRow());
-            }
-       }
-        this.data = new CsvResultSet(this.data.getColumns(), rows);
-        return this.data;
-    }
-    
-    public CsvResultSet where(int colIndex, Object colValue){
-    CsvResultSet retData;
-       List<Map<String,Object>> rows = new ArrayList<Map<String,Object>>();
-        while(this.data.next()){
-            if (this.data.getObject(colIndex) == colValue) {
-                rows.add(this.data.getCurrentRow());
-            }
-       }
-        this.data = new CsvResultSet(this.data.getColumns(), rows);
-        return this.data;
-    }
+    // 
     
     private static String[] parseCsvLine(String line) {
         List<String> values = new ArrayList<>();
