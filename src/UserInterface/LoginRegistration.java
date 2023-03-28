@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author mdalla
+ * @author fawaz
  */
 public class LoginRegistration extends Application {
     

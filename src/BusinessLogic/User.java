@@ -6,7 +6,7 @@ package BusinessLogic;
 
 /**
  *
- * @author mdalla
+ * @author fawaz
  */
 public class User {
 
