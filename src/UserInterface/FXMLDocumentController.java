@@ -4,23 +4,22 @@
  */
 package UserInterface;
 
+import static DataAccess.DataStore.getInstance;
+import static Utils.IAuthorize.login;
+import static Utils.IAuthorize.register;
+
+import BusinessLogic.User;
+import DataAccess.DataStore;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.scene.Parent;
-import DataAccess.DataAccess;
-import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.scene.layout.VBox;
-import BusinessLogic.User;
-import DataAccess.DataStore;
-import static DataAccess.DataStore.getInstance;
-import static Utils.IAuthorize.login;
-import static Utils.IAuthorize.register;
 
 public class FXMLDocumentController {
 
