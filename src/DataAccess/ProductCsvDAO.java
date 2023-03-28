@@ -34,6 +34,7 @@ public class ProductCsvDAO extends ProductDAO {
         dict.put("name", item.getName());
         dict.put("description", item.getDescription());
         dict.put("price", item.getPrice());
+        dict.put("image", item.getImage());
 
         result.addRow(dict);
         io.save(result);
@@ -50,6 +51,7 @@ public class ProductCsvDAO extends ProductDAO {
             product.setName(result.getString("name"));
             product.setDescription(result.getString("description"));
             product.setPrice(result.getDouble("price"));
+            product.setImage(result.getString("image"));
             
             product.setColors(getInstance().getColorDao().getProductColors(id));
             product.setSizes(getInstance().getSizeDao().getProductSizes(id));
@@ -67,6 +69,7 @@ public class ProductCsvDAO extends ProductDAO {
             result.updateString("name", item.getName());
             result.updateString("description", item.getDescription());
             result.updateDouble("price", item.getPrice());
+            result.updateString("image", item.getImage());
             
             io.save(result);
             return true;
@@ -97,6 +100,7 @@ public class ProductCsvDAO extends ProductDAO {
             product.setName(result.getString("name"));
             product.setDescription(result.getString("description"));
             product.setPrice(result.getDouble("price"));
+            product.setImage(result.getString("image"));
             
             product.setColors(getInstance().getColorDao().getProductColors(product.getId()));
             product.setSizes(getInstance().getSizeDao().getProductSizes(product.getId()));
