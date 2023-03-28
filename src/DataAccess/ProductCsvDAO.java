@@ -7,6 +7,7 @@ import java.util.Map;
 
 
 import BusinessLogic.Product;
+import static DataAccess.DataStore.getInstance;
 
 public class ProductCsvDAO extends ProductDAO {
 

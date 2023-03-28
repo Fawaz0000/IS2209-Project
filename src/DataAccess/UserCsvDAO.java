@@ -21,10 +21,16 @@ public class UserCsvDAO extends UserDAO {
                 return null;
             }
         }
+
+        if (item.getRole() == null || item.getRole().isEmpty()) {
+            item.setRole("user");
+        }
+
         Map<String, Object> dict = new HashMap();
         dict.put("name", item.getName());
         dict.put("email", item.getEmail());
         dict.put("password", item.getPassword());
+        dict.put("role", item.getRole());
         dict.put("shoeSize", item.getShoeSize().getSize());
         dict.put("shirtSize", item.getShirtSize().getSize());
         dict.put("pantSize", item.getPantSize().getSize());
@@ -41,6 +47,8 @@ public class UserCsvDAO extends UserDAO {
               user.setName(res.getString("name"));
               user.setEmail(res.getString("email"));
               user.setPassword(res.getString("password"));
+            user.setRole(res.getString("role"));
+
               user.setShoeSize(res.getString("shoeSize"));
               user.setShirtSize(res.getString("shirtSize"));
               user.setPantSize(res.getString("pantSize"));
@@ -57,6 +65,7 @@ public class UserCsvDAO extends UserDAO {
                 result.updateString("name", item.getName());
                 result.updateString("email", item.getEmail());
                 result.updateString("password", item.getPassword());
+                result.updateString("role", item.getRole());
                 result.updateString("shoeSize", item.getShoeSize().getSize());
                 result.updateString("shirtSize", item.getShirtSize().getSize());
                 result.updateString("pantSize", item.getPantSize().getSize());
@@ -90,6 +99,7 @@ public class UserCsvDAO extends UserDAO {
             user.setName(result.getString("name"));
             user.setEmail(result.getString("email"));
             user.setPassword(result.getString("password"));
+            user.setRole(result.getString("role"));
             user.setShoeSize(result.getString("shoeSize"));
             user.setShirtSize(result.getString("shirtSize"));
             user.setPantSize(result.getString("pantSize"));
