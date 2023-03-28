@@ -1,6 +1,4 @@
 /build
 /dist
 /test
-/nbproject
-/nbproject/
-/nbproject/*
+/nbproject/private/**
