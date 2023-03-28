@@ -2,6 +2,12 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Fawaz/Downloads/LoginRegistration/LoginRegistration/src/DataAccess/UserCsvDAO.java</file>
+            <file>file:/C:/Users/Fawaz/Downloads/LoginRegistration/LoginRegistration/src/UserInterface/MenuController.java</file>
+            <file>file:/C:/Users/Fawaz/Downloads/LoginRegistration/LoginRegistration/src/Utils/ISceneManagement.java</file>
+            <file>file:/C:/Users/Fawaz/Downloads/LoginRegistration/LoginRegistration/src/DataAccess/UserDAO.java</file>
+            <file>file:/C:/Users/Fawaz/Downloads/LoginRegistration/LoginRegistration/src/UserInterface/LoginRegistration.java</file>
+        </group>
     </open-files>
 </project-private>
