@@ -17,4 +17,12 @@ public interface ISceneManagement {
         stage.setScene(scene);
         stage.show();
     }
+
+    public static void switchScene(String fxmlFileName) throws IOException {
+        Parent root = FXMLLoader.load(Class.class.getClassLoader().getResource(fxmlFileName));
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+    }
 }
