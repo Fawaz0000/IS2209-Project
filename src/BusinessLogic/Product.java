@@ -1,13 +1,15 @@
 package BusinessLogic;
 
+import java.util.List;
+
 public class Product {
 
     public int id;
     public String name;
     public String description;
     public double price;
-    public Color[] colors;
-    public Size[] sizes;
+    public List<Color> colors;
+    public List<Size> sizes;
 
     public Product(String name, String description, double price) {
         this.name = name;
@@ -57,24 +59,24 @@ public class Product {
         this.price = price;
     }
 
-    public Color[] getColors() {
+    public List<Color> getColors() {
         return this.colors;
     }
 
-    public void setColors(Color[] colors) {
-        this.colors = colors;
+    public void setColors(List<Color> list) {
+        this.colors = list;
     }
 
-    public Size[] getSizes() {
+    public List<Size> getSizes() {
         return this.sizes;
     }
 
-    public void setSizes(Size[] sizes) {
-        this.sizes = sizes;
+    public void setSizes(List<Size> list) {
+        this.sizes = list;
     }
 
-    public String toCsv() {
-        return this.id + "," + this.name + "," + this.description + "," + this.price;
+    public Product id(int id) {
+        this.id = id;
+        return this;
     }
-    
 }

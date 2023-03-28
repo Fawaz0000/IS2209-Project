@@ -25,4 +25,12 @@ public class Size {
         this.size = size;
     }
 
+    public int getProdId() {
+        return this.prodId;
+    }
+
+    public void setProdId(int prodId) {
+        this.prodId = prodId;
+    }
+
 }

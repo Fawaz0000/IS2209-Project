@@ -1,5 +1,7 @@
 package BusinessLogic;
 
+import java.sql.Timestamp;
+
 public class Order {
 
     public int id;
@@ -9,6 +11,7 @@ public class Order {
     public double price;
     public Color color;
     public Size size;
+    public Timestamp date;
     
     public Order(int id, User user, Product product, int quantity, double price, Color color, Size size) {
         this.id = id;
@@ -72,6 +75,9 @@ public class Order {
     public void setColor(Color color) {
         this.color = color;
     }
+    public void setColor(String color) {
+        this.color = new Color(color);
+    }
 
     public Size getSize() {
         return this.size;
@@ -79,6 +85,19 @@ public class Order {
 
     public void setSize(Size size) {
         this.size = size;
+    }
+
+    public Timestamp getDate() {
+        return this.date;
+    }
+
+    public void setDate(Timestamp date) {
+        this.date = date;
+    }
+
+    public Order id(int id) {
+        this.id = id;
+        return this;
     }
 
     public String toCsv() {

@@ -13,6 +13,7 @@ public class User {
     private String name;
     private String email;
     private String password;
+    private String role;
     private Size shoeSize;
     private Size shirtSize;
     private Size pantSize;
@@ -87,6 +88,14 @@ public class User {
 
     public void setPantSize(Size pantSize) {
         this.pantSize = pantSize;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
  }

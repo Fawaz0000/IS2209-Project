@@ -19,6 +19,8 @@ import javafx.scene.layout.VBox;
 import BusinessLogic.User;
 import DataAccess.DataStore;
 import static DataAccess.DataStore.getInstance;
+import static Utils.IAuthorize.login;
+import static Utils.IAuthorize.register;
 
 public class FXMLDocumentController {
 
@@ -58,10 +60,10 @@ public class FXMLDocumentController {
         userToCheck.setEmail(tflogEmailAddress.getText());
         userToCheck.setPassword(pwlogPassword.getText());
 
-        boolean userP = true; //dataAccess.dologin(userToCheck);
+        boolean userP = login(userToCheck);
         
         if (userP == true) {
-            talogMessage.setText("User Found");
+            talogMessage.setText("...Logging In...");
             Stage stage = (Stage) (Stage)((Node) event.getSource()).getScene().getWindow();
             Parent root= FXMLLoader.load(getClass().getResource("Menu.fxml"));
             Scene scene = new Scene(root);
@@ -70,7 +72,7 @@ public class FXMLDocumentController {
             stage.show();
         }
         else {
-            talogMessage.setText("User Not Found");
+            talogMessage.setText("Incorrect Email or Password");
         }
     }
 
@@ -91,8 +93,11 @@ public class FXMLDocumentController {
         userToCreate.setEmail(tfregEmailAddress.getText());
         userToCreate.setPassword(pwregPassword.getText());
 
-//        dataAccess.create(userToCreate);
-//        dataAccess.write();
+        if(register(userToCreate) == false){
+            taregMessage.setText("User Already Exists");
+            return;
+        }
+
         taregMessage.setText("User Registered");
 
     }
